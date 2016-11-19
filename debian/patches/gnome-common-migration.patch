@@ -1,3 +1,9 @@
+Description: Migrate away from gnome-common
+Author: marga@debian.org
+Forwarded: not yet
+Last-Update: 2016-11-19
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 Index: xapp/autogen.sh
 ===================================================================
 --- xapp.orig/autogen.sh	2016-11-19 18:32:42.305346265 +0100
