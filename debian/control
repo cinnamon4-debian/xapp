@@ -9,7 +9,6 @@ Build-Depends:
  autoconf-archive,
  debhelper (>= 9),
  dh-autoreconf,
- dh-python,
  dpkg-dev (>= 1.15.1),
  gnome-doc-utils (>= 0.3.2),
  gnome-pkg-tools (>= 0.10),
@@ -39,7 +38,6 @@ Depends:
  python3-gi,
  xdg-utils,
  ${misc:Depends},
- ${python3:Depends},
 Description: Common files for XApp desktop apps
  This package includes files that are shared between several XApp
  apps (i18n files and configuration schemas).
