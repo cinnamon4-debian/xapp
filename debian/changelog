@@ -1,6 +1,6 @@
-xapp (1.0.2-1~) UNRELEASED; urgency=medium
+xapp (1.0.2-1) unstable; urgency=medium
 
   * Initial version
   * Added gnome-common-migration.patch
 
- -- Margarita Manterola <marga@debian.org>  Sat, 19 Nov 2016 17:05:30 +0100
+ -- Margarita Manterola <marga@debian.org>  Tue, 06 Dec 2016 19:23:57 -0300
