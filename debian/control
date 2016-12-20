@@ -25,8 +25,8 @@ Build-Depends:
  yelp-tools,
 Standards-Version: 3.9.8
 Homepage: http://cinnamon.linuxmint.com/
-Vcs-Browser: https://anonscm.debian.org/git/pkg-cinnamon/nemo.git
-Vcs-Git: https://anonscm.debian.org/git/pkg-cinnamon/nemo.git
+Vcs-Browser: https://anonscm.debian.org/git/pkg-cinnamon/xapp.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-cinnamon/xapp.git
 
 Package: xapps-common
 Architecture: all
