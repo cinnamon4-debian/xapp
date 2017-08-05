@@ -1,0 +1,8 @@
+# There are other packages that deal with this
+usr/bin/pastebin
+# Uses the previous command and inxi
+usr/bin/upload-system-info
+# This should be handled by xfce
+usr/bin/xfce4-set-wallpaper
+# We are not using libtool files
+usr/lib/*/libxapp.la
