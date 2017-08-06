@@ -1,8 +1,12 @@
-xapp (1.0.3-1~) UNRELEASED; urgency=medium
+xapp (1.0.3-1) experimental; urgency=medium
 
   * New upstream release (1.0.3).
+  * Drop upstream patches
+  * Use upstream's autogen script
+  * Add a debian/not-installed file
+  * Release to experimental
 
- -- Maximiliano Curia <maxy@debian.org>  Sat, 05 Aug 2017 01:07:27 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 06 Aug 2017 17:31:56 +0200
 
 xapp (1.0.2-1) unstable; urgency=medium
 
