@@ -6,11 +6,11 @@ DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 DEB_PKG_CONFIG_LIBDIR=$(shell pkg-config gobject-introspection-1.0 --variable libdir | sed -e 's/.//')
 
 %:
-	dh $@ --parallel --with=autoreconf,gir,gnome
+	dh $@ --parallel --with=autoreconf,gir,gnome,python2,python3
 
 override_dh_autoreconf:
 	NOCONFIGURE=1 dh_autoreconf --as-needed ./autogen.sh
-	
+
 override_dh_auto_configure:
 	dh_auto_configure -- --enable-gtk-doc
 
@@ -19,4 +19,9 @@ override_dh_gnome_clean:
 
 override_dh_install:
 	sed 's@DEB_PKG_CONFIG_LIBDIR@${DEB_PKG_CONFIG_LIBDIR}@' debian/gir1.2-xapp-1.0.install.in > debian/gir1.2-xapp-1.0.install
+
+	# install the python3 gir override file as well
+	PYTHON=python3 ./configure --prefix=/usr
+	cd pygobject/ && DESTDIR=../debian/tmp make install && cd ..
+
 	dh_install --list-missing
