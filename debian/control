@@ -75,3 +75,10 @@ Architecture: any
 Depends: ${gir:Depends}, ${misc:Depends}, ${shlibs:Depends}
 Description: Introspection data for XApp
  This package contains the introspection data for XApp.
+
+Package: xapps-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}, devhelp
+Description: Libxapp documentation
+ This package contains documentation for XApp library
