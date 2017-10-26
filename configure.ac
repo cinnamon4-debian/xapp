@@ -1,5 +1,5 @@
 
-AC_INIT(xapp, 1.0.3)
+AC_INIT(xapp, 1.0.4)
 AC_CONFIG_SRCDIR(libxapp)
 m4_ifdef([AX_IS_RELEASE], [AX_IS_RELEASE([always])])
 
@@ -97,10 +97,26 @@ GLIB_GSETTINGS
 
 GOBJECT_INTROSPECTION_CHECK([0.9.7])
 
+CFLAGS="$CFLAGS -Wno-declaration-after-statement"
+
+# Python support
+
+PYGOBJECT_REQUIRED=2.90
+
+PKG_CHECK_EXISTS([pygobject-3.0 >= $PYGOBJECT_REQUIRED],
+                 [have_python=yes], [have_python=no])
+
+AS_IF([test "x$have_python" = "xyes"],
+    [AM_PATH_PYTHON
+     AC_SUBST([pyoverridesdir], [`$PYTHON -c "import gi;print (gi._overridesdir)" 2>/dev/null`])])
+
+AM_CONDITIONAL([ENABLE_PYTHON], [test "x$have_python" = "xyes"])
+
 AC_CONFIG_FILES([
 Makefile
 docs/Makefile
 docs/reference/Makefile
+pygobject/Makefile
 libxapp/Makefile
 libxapp/xapp.pc
 libxapp/xapp-uninstalled.pc
