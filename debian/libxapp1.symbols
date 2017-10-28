@@ -1,4 +1,11 @@
 libxapp.so.1 libxapp1 #MINVER#
+ xapp_glade_catalog_init@Base 1.0.4
+ xapp_gtk_window_get_type@Base 1.0.4
+ xapp_gtk_window_new@Base 1.0.4
+ xapp_gtk_window_set_icon_from_file@Base 1.0.4
+ xapp_gtk_window_set_icon_name@Base 1.0.4
+ xapp_gtk_window_set_progress@Base 1.0.4
+ xapp_gtk_window_set_progress_pulse@Base 1.0.4
  xapp_kbd_layout_controller_get_all_names@Base 1.0.2
  xapp_kbd_layout_controller_get_current_flag_id@Base 1.0.2
  xapp_kbd_layout_controller_get_current_group@Base 1.0.2
@@ -22,3 +29,12 @@ libxapp.so.1 libxapp1 #MINVER#
  xapp_monitor_blanker_get_type@Base 1.0.2
  xapp_monitor_blanker_new@Base 1.0.2
  xapp_monitor_blanker_unblank_monitors@Base 1.0.2
+ xapp_set_window_icon_from_file@Base 1.0.4
+ xapp_set_window_icon_name@Base 1.0.4
+ xapp_set_window_progress@Base 1.0.4
+ xapp_set_window_progress_pulse@Base 1.0.4
+ xapp_set_xid_icon_from_file@Base 1.0.4
+ xapp_set_xid_icon_name@Base 1.0.4
+ xapp_set_xid_progress@Base 1.0.4
+ xapp_set_xid_progress_pulse@Base 1.0.4
+
