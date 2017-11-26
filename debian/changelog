@@ -1,9 +1,15 @@
-xapp (1.0.4-1~) UNRELEASED; urgency=medium
+xapp (1.0.4-1~1) UNRELEASED; urgency=medium
 
+  [ Fabio Fantoni ]
   * New upstream release (1.0.4).
-  * Add missed xapps-doc package
+  * Add missing xapps-doc package
+  * Update Symbols
 
- -- Fabio Fantoni <fantonifabio@tiscali.it>  Thu, 26 Oct 2017 12:15:04 +0200
+  [ Maximiliano Curia ]
+  * Degrade gist and inxi dependencies to recommends.
+    Thanks to Christoph Anton Mitterer for the report (Closes: 849017)
+
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 26 Nov 2017 10:27:55 +0100
 
 xapp (1.0.3-2) unstable; urgency=medium
 
