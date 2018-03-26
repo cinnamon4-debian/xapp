@@ -8,7 +8,6 @@ Uploaders:
 Build-Depends:
  autoconf-archive,
  debhelper (>= 9),
- dh-autoreconf,
  dh-python,
  dpkg-dev (>= 1.15.1),
  gnome-doc-utils (>= 0.3.2),
