@@ -1,3 +1,12 @@
+xapp (1.0.4-2~) UNRELEASED; urgency=medium
+
+  * New revision
+  * Drop dh-autoreconf (no longer needed with dh >= 10)
+  * Bump debhelper build-dep and compat to 11.
+  * Bump Standards-Version to 4.1.3.
+
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 27 Mar 2018 16:56:21 +0200
+
 xapp (1.0.4-1) experimental; urgency=medium
 
   [ Fabio Fantoni ]
