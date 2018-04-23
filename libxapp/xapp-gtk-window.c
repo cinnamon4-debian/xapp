@@ -70,6 +70,23 @@ struct _XAppGtkWindow
 
 G_DEFINE_TYPE_WITH_PRIVATE (XAppGtkWindow, xapp_gtk_window, GTK_TYPE_WINDOW)
 
+static gboolean
+is_x11_session (void)
+{
+    static gboolean running_x11 = FALSE;
+    static gsize once_init_value = 0;
+
+    if (g_once_init_enter (&once_init_value))
+    {
+        running_x11 = GDK_IS_X11_DISPLAY(gdk_display_get_default());
+        g_debug ("XAppGtkWindow: is_x11_session: %s\n", running_x11 ? "TRUE" : "FALSE");
+
+        g_once_init_leave (&once_init_value, 1);
+    }
+
+    return running_x11;
+}
+
 static void
 clear_icon_strings (XAppGtkWindowPrivate *priv)
 {
@@ -129,7 +146,7 @@ set_window_hint_cardinal (Window       xid,
                          gdk_x11_get_xatom_by_name_for_display (display, atom_name));
     }
 
-    gdk_error_trap_pop ();
+    gdk_error_trap_pop_ignored ();
 }
 
 static Window
@@ -192,6 +209,10 @@ set_icon_name_internal (GtkWindow            *window,
                         XAppGtkWindowPrivate *priv,
                         const gchar          *icon_name)
 {
+    if (!is_x11_session ()) {
+        goto out;
+    }
+
     if (g_strcmp0 (icon_name, priv->icon_name) == 0)
     {
         gtk_window_set_icon_name (window, icon_name);
@@ -214,6 +235,7 @@ set_icon_name_internal (GtkWindow            *window,
         update_window_icon (window, priv);
     }
 
+out:
     /* Call the GtkWindow method for compatibility */
     gtk_window_set_icon_name (GTK_WINDOW (window), icon_name);
 }
@@ -224,6 +246,10 @@ set_icon_from_file_internal (GtkWindow            *window,
                              const gchar          *file_name,
                              GError              **error)
 {
+    if (!is_x11_session ()) {
+        goto out;
+    }
+
     if (g_strcmp0 (file_name, priv->icon_path) == 0)
     {
         gtk_window_set_icon_from_file (window, file_name, error);
@@ -246,6 +272,7 @@ set_icon_from_file_internal (GtkWindow            *window,
         update_window_icon (window, priv);
     }
 
+out:
     gtk_window_set_icon_from_file (GTK_WINDOW (window), file_name, error);
 }
 
@@ -254,6 +281,10 @@ set_progress_internal (GtkWindow            *window,
                        XAppGtkWindowPrivate *priv,
                        gint                 progress)
 {
+    if (!is_x11_session ()) {
+        return;
+    }
+
     gboolean update;
     guint clamped_progress;
 
@@ -289,6 +320,10 @@ set_progress_pulse_internal (GtkWindow            *window,
                              XAppGtkWindowPrivate *priv,
                              gboolean              pulse)
 {
+    if (!is_x11_session ()) {
+        return;
+    }
+
     gboolean update;
 
     update = FALSE;
