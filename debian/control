@@ -6,7 +6,6 @@ Uploaders:
  Maximiliano Curia <maxy@debian.org>,
  Margarita Manterola <marga@debian.org>,
 Build-Depends:
- autoconf-archive,
  debhelper (>= 11~),
  dh-python,
  dpkg-dev (>= 1.15.1),
@@ -22,9 +21,11 @@ Build-Depends:
  libgtk-3-dev (>= 3.3.16),
  libx11-dev,
  libxkbfile-dev,
+ meson (>= 0.40.0),
  python,
  python-gi-dev,
  python3,
+ valac,
  yelp-tools,
 Standards-Version: 4.1.3
 Homepage: http://cinnamon.linuxmint.com/
@@ -72,7 +73,7 @@ Description: XApp library
 Package: xapps-common
 Architecture: all
 Multi-Arch: foreign
-Depends: python3, python3-gi, xdg-utils, ${misc:Depends}
+Depends: python3, python3-gi, xdg-utils, ${misc:Depends}, ${python3:Depends}
 Recommends: gist, inxi
 Description: Common files for XApp desktop apps
  This package includes files that are shared between several XApp
