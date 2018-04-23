@@ -10,3 +10,8 @@ override_dh_auto_configure:
 	-D docs=true \
 	-D deprecated_warnings=false
 
+# --list-missing will be default in compat 12
+override_dh_missing:
+	dh_missing --list-missing
+
+
