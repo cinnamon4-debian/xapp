@@ -24,7 +24,7 @@ Build-Depends:
  python-gi-dev,
  python3,
  valac,
-Standards-Version: 4.1.3
+Standards-Version: 4.1.4
 Homepage: http://cinnamon.linuxmint.com/
 Vcs-Browser: https://salsa.debian.org/cinnamon-team/xapp
 Vcs-Git: https://salsa.debian.org/cinnamon-team/xapp.git
