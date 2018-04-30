@@ -9,8 +9,6 @@ Build-Depends:
  debhelper (>= 11.1~),
  dh-python,
  dpkg-dev (>= 1.15.1),
- gnome-doc-utils (>= 0.3.2),
- gnome-pkg-tools (>= 0.10),
  gobject-introspection (>= 0.10.2-1~),
  gtk-doc-tools (>= 1.4),
  intltool (>= 0.40.6),
@@ -26,7 +24,6 @@ Build-Depends:
  python-gi-dev,
  python3,
  valac,
- yelp-tools,
 Standards-Version: 4.1.3
 Homepage: http://cinnamon.linuxmint.com/
 Vcs-Browser: https://salsa.debian.org/cinnamon-team/xapp
