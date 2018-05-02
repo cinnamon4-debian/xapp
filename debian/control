@@ -46,6 +46,7 @@ Section: libdevel
 Architecture: any
 Depends:
  gir1.2-xapp-1.0 (= ${binary:Version}),
+ libgnomekbd-dev,
  libgtk-3-dev (>= 3.3.16),
  libxapp1 (= ${binary:Version}),
  libxkbfile-dev,
