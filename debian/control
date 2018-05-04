@@ -40,6 +40,7 @@ Depends:
  ${shlibs:Depends},
 Description: Introspection data for XApp
  This package contains the introspection data for XApp.
+Breaks: cinnamon (<< 3.8), cinnamon-screensaver (<< 3.8)
 
 Package: libxapp-dev
 Section: libdevel
@@ -67,6 +68,7 @@ Depends:
  ${shlibs:Depends},
 Description: XApp library
  This library is used by several Xapp apps.
+Breaks: nemo (<< 3.8)
 
 Package: xapps-common
 Architecture: all
@@ -76,6 +78,7 @@ Recommends: gist, inxi
 Description: Common files for XApp desktop apps
  This package includes files that are shared between several XApp
  apps (i18n files and configuration schemas).
+Breaks: cinnamon (<< 3.8)
 
 Package: xapps-doc
 Section: doc
