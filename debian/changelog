@@ -1,4 +1,4 @@
-xapp (1.2.0-1~1) UNRELEASED; urgency=medium
+xapp (1.2.0-1) experimental; urgency=medium
 
   [ Fabio Fantoni ]
   * New upstream release (1.2.0).
@@ -9,8 +9,10 @@ xapp (1.2.0-1~1) UNRELEASED; urgency=medium
   * Update install files
   * Bump Standards-Version to 4.1.4.
   * Add missing -dev dependency
+  * Bump group breaks (1.2)
+  * Release to experimental
 
- -- Maximiliano Curia <maxy@debian.org>  Wed, 02 May 2018 22:39:53 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 05 May 2018 14:30:25 +0200
 
 xapp (1.0.4-2) unstable; urgency=medium
 
