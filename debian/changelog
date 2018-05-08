@@ -1,0 +1,148 @@
+xapp (1.2.1) tara; urgency=medium
+
+  [ Michael Webster ]
+  * icons: Add category-search-symbolic
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 06 May 2018 14:34:17 +0100
+
+xapp (1.2.0) tara; urgency=medium
+
+  [ Clement Lefebvre ]
+  * Add CI configuration
+
+  [ Michael Webster ]
+  * Build: Switch to Meson (#34)
+  * docs/meson.build: split mkdb args properly. (fixes arch build)
+  * Fix post-install script shebang, remove the schema file from translation tracking.
+  * build: make docs optional, but enabled in debian build.  Add deprecated warnings option as well.
+  * xapp-gtk-window.c: use gdk_error_trap_pop_ignored to quiet build warning.
+  * xapp-gtk-window.c: Skip x11 calls if we're not running an x session.
+  * xapp-gtk-window.c: only do an x11 check once, cache the result.
+
+  [ JosephMcc ]
+  * prefs-window: Remove a stray separator
+
+  [ Michael Webster ]
+  * build: Fix pkg-config generation to require header-file-included libs (fixes CI build for nemo)
+
+  [ NikoKrause ]
+  * Add media-mount-symbolic icon (#37)
+  * extract/compress icons for nemo-fileroller (#38)
+
+  [ Fabio Fantoni ]
+  * debian: small improvements about python
+  * debian: wrap-and-sort -bst
+  * update debian/copyright
+  * Bump debhelper build-dep and compat to 10
+  * add debian/not-installed
+  * Drop dh's parallel arg (no longer needed with dh >= 10)
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 16 Apr 2018 15:39:24 +0100
+
+xapp (1.0.4) sylvia; urgency=medium
+
+  [ Clement Lefebvre ]
+  * Packaging: Change description
+
+  [ Michael Webster ]
+  * Add xapp-gtk-utils.c/.h
+  * Remove extra spaces inserted by clandestine foreign hackers.
+  * Add XAppGtkWindow, with methods that shadow GtkWindow's icon setting ones.  This way, programs only need to change the window class, rather than adding extra code.
+  * xapp-gtk-window: Add wrapper functions for GtkWindow subclasses.
+  * xapp-gtk-window.*: Fix argument type for wrapper function.
+  * xapp-gtk-window: Add progress features, refactor, add demo script for XAppGtkWindow.
+  * xapp-gtk-window test script: Add an animate button (to test real-world effects on system reponsiveness while an operation is running.)
+  * all: Fix build warnings, documentation.
+  * xapp-gtk-window: Make xapp_gtk_window_new() handle the same arguments as gtk_window_new().
+  * all: Allow XAppGtkWindows to be used in builder (ui) files and in Glade.
+  * update some files modified by the build
+  * pygobject/XApp.py: simplify and add an explanation as to why this file is here (to remind me in a year.)
+  * xapp-gtk-window.c: Add xid-based functions
+  * xapp-gtk-window: Move the xlib include into the .c file - it can cause namespace collisions (notably synaptic.)  It's ok to treat "Window" as an unsigned long, because that's what they are.
+
+  [ Clement Lefebvre ]
+  * xapp-gtk-window: Trap X errors when setting progress
+  * Add a VAPI file to support Vala
+  * Add a dependency on libxkbfile-dev for -dev pkg and build-dep.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 24 Oct 2017 12:06:19 +0100
+
+xapp (1.0.3) sonya; urgency=medium
+
+  [ Michael Webster ]
+  * Fix build
+  * xapp-kbd-layout-controller - update test script to reflect current api/intent
+
+  [ Clement Lefebvre ]
+  * Review licensing
+  * Handle exceptions in usr/bin/upload-system-info
+
+  [ JosephMcc ]
+  * Add a couple of symbolic pane visibility icons
+  * icons: Add an icon for regex-search
+
+  [ leigh123linux ]
+  * switch to the correct python deps
+
+  [ Michael Webster ]
+  * xapp-kbd-layout-controller.c: Allow up to 3 character labels.
+
+  [ JosephMcc ]
+  * Complete our set of pane icons
+  * Add support for building gtk-doc
+
+  [ leigh123linux ]
+  * Migrate away from gnome-common deprecated vars and macros
+  * Use python3 as all scripts are in python3
+
+ -- Clement Lefebvre <root@linuxmint.com>  Wed, 03 May 2017 11:27:21 +0100
+
+xapp (1.0.2) serena; urgency=medium
+
+  [ Clement Lefebvre ]
+  * Implement window blanking
+  * Continued implementation of monitor blanking
+  * Display: properly initialize values and add a function to know if monitors are blanked
+
+  [ JosephMcc ]
+  * xapp-display.c: Add a missing cast
+
+  [ Clement Lefebvre ]
+  * Added some symbolic icons needed by Xed
+
+  [ JosephMcc ]
+  * icons: Redesign the xapp-searchbar icons
+  * formatting: Clean up code formatting
+
+  [ Emmanuel ]
+  * properly declare variable used in for loops
+
+  [ JosephMcc ]
+  * xapp-display: Add a missing cast
+  * xapp-display: Don't use deprecated gtk_widget_modify_bg
+
+  [ Michael Webster ]
+  * debian: Fix multiarch location of typelib file, don't strip debug symbols.
+  * Add XAppKbdLayoutController - this is a wrapper around libgnomekbd api to provide unique icons for each layout.
+  * Update debian/control
+  * Cleanup some leftover dependencies, some unneeded files, clean up gir scanning.
+
+  [ Clement Lefebvre ]
+  * Added /usr/bin/pastebin and /usr/bin/upload-system-info
+  * Pastebin: Added support for fpaste
+  * libxapp: Rename XAppDisplay -> XAppMonitorBlanker
+  * Create README.md
+
+  [ leigh123linux ]
+  * Fix Warnings
+
+  [ Michael Webster ]
+  * Rework XAppKbdLayoutController:
+
+ -- Clement Lefebvre <root@linuxmint.com>  Mon, 07 Nov 2016 15:56:44 +0000
+
+xapp (1.0.1) sarah; urgency=medium
+
+  * Initial version
+
+ -- Clement Lefebvre <root@linuxmint.com>  Sun, 21 Aug 2016 11:59:50 +0100
