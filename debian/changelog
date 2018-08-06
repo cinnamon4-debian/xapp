@@ -1,3 +1,9 @@
+xapp (1.2.2-1~) UNRELEASED; urgency=medium
+
+  * New upstream release (1.2.2).
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 06 Aug 2018 15:42:04 +0200
+
 xapp (1.2.1-1) experimental; urgency=medium
 
   * New upstream release (1.2.1).
