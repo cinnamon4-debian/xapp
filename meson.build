@@ -1,6 +1,6 @@
 project('xapp',
     'c',
-    version : '1.2.2'
+    version : '1.4.2'
 )
 
 gnome = import('gnome')
@@ -27,7 +27,7 @@ c = configure_file(output : 'config.h',
 top_inc = include_directories('.')
 
 subdir('libxapp')
-# subdir('po')
+subdir('po')
 subdir('pygobject')
 subdir('files')
 subdir('schemas')
