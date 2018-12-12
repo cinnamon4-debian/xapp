@@ -11,27 +11,41 @@ libdeps += dependency('x11', required: true)
 
 xapp_headers = [
     'xapp-gtk-window.h',
+    'xapp-icon-chooser-button.h',
+    'xapp-icon-chooser-dialog.h',
     'xapp-kbd-layout-controller.h',
     'xapp-monitor-blanker.h',
-    'xapp-preferences-window.h'
+    'xapp-preferences-window.h',
+    'xapp-stack-sidebar.h',
 ]
 
 xapp_sources = [
     'xapp-glade-catalog.c',
     'xapp-gtk-window.c',
+    'xapp-icon-chooser-button.c',
+    'xapp-icon-chooser-dialog.c',
     'xapp-kbd-layout-controller.c',
     'xapp-monitor-blanker.c',
     'xapp-preferences-window.c',
+    'xapp-stack-sidebar.c',
 ]
 
+xapp_enums = gnome.mkenums('xapp-enums',
+    sources : xapp_headers,
+    c_template : 'xapp-enums.c.template',
+    h_template : 'xapp-enums.h.template',
+    identifier_prefix : 'XApp',
+    symbol_prefix : 'xapp'
+)
+
 libxapp = library('xapp',
-    sources  : xapp_headers + xapp_sources,
+    sources  : xapp_headers + xapp_sources + xapp_enums,
     include_directories: [top_inc],
     version: meson.project_version(),
     soversion: '1',
     dependencies: libdeps,
     c_args: ['-Wno-declaration-after-statement'],
-    link_args: [ '-Wl,-Bsymbolic', '-Wl,-z,relro', '-Wl,-z,now', ],
+    link_args: [ '-Wl,-Bsymbolic', '-Wl,-z,relro', '-Wl,-z,now', '-lm'],
     install: true
 )
 
