@@ -1,5 +1,6 @@
 libxapp.so.1 libxapp1 #MINVER#
  create_blanking_window@Base 1.2.0
+ wrangle_pixbuf_size@Base 1.4.2-1~
  xapp_glade_catalog_init@Base 1.0.4
  xapp_gtk_window_get_type@Base 1.0.4
  xapp_gtk_window_new@Base 1.0.4
@@ -7,6 +8,25 @@ libxapp.so.1 libxapp1 #MINVER#
  xapp_gtk_window_set_icon_name@Base 1.0.4
  xapp_gtk_window_set_progress@Base 1.0.4
  xapp_gtk_window_set_progress_pulse@Base 1.0.4
+ xapp_icon_chooser_button_get_dialog@Base 1.4.2-1~
+ xapp_icon_chooser_button_get_icon@Base 1.4.2-1~
+ xapp_icon_chooser_button_get_property@Base 1.4.2-1~
+ xapp_icon_chooser_button_get_type@Base 1.4.2-1~
+ xapp_icon_chooser_button_new@Base 1.4.2-1~
+ xapp_icon_chooser_button_new_with_size@Base 1.4.2-1~
+ xapp_icon_chooser_button_set_icon@Base 1.4.2-1~
+ xapp_icon_chooser_button_set_icon_size@Base 1.4.2-1~
+ xapp_icon_chooser_button_set_property@Base 1.4.2-1~
+ xapp_icon_chooser_dialog_add_button@Base 1.4.2-1~
+ xapp_icon_chooser_dialog_get_icon_string@Base 1.4.2-1~
+ xapp_icon_chooser_dialog_get_property@Base 1.4.2-1~
+ xapp_icon_chooser_dialog_get_type@Base 1.4.2-1~
+ xapp_icon_chooser_dialog_new@Base 1.4.2-1~
+ xapp_icon_chooser_dialog_run@Base 1.4.2-1~
+ xapp_icon_chooser_dialog_run_with_category@Base 1.4.2-1~
+ xapp_icon_chooser_dialog_run_with_icon@Base 1.4.2-1~
+ xapp_icon_chooser_dialog_set_property@Base 1.4.2-1~
+ xapp_icon_size_get_type@Base 1.4.2-1~
  xapp_kbd_layout_controller_get_all_names@Base 1.0.2
  xapp_kbd_layout_controller_get_current_flag_id@Base 1.0.2
  xapp_kbd_layout_controller_get_current_group@Base 1.0.2
@@ -42,4 +62,7 @@ libxapp.so.1 libxapp1 #MINVER#
  xapp_set_xid_icon_name@Base 1.0.4
  xapp_set_xid_progress@Base 1.0.4
  xapp_set_xid_progress_pulse@Base 1.0.4
-
+ xapp_stack_sidebar_get_stack@Base 1.4.2-1~
+ xapp_stack_sidebar_get_type@Base 1.4.2-1~
+ xapp_stack_sidebar_new@Base 1.4.2-1~
+ xapp_stack_sidebar_set_stack@Base 1.4.2-1~
