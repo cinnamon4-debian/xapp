@@ -1,3 +1,22 @@
+xapp (1.4.5) tessa; urgency=medium
+
+  * l10n: Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 11 Dec 2018 14:21:26 +0000
+
+xapp (1.4.4) tessa; urgency=medium
+
+  * Update translations
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 27 Nov 2018 18:16:32 +0000
+
+xapp (1.4.3) tessa; urgency=medium
+
+  [ Michael Webster ]
+  * xapp-icon-chooser-dialog.c: Don't deep copy the category's icon list, just shallow copy and only free the strings once.  This is faster.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Tue, 27 Nov 2018 17:24:54 +0000
+
 xapp (1.4.2) tessa; urgency=medium
 
   [ Michael Webster ]
