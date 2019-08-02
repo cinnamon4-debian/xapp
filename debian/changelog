@@ -1,12 +1,12 @@
-xapp (1.4.5-1~1) UNRELEASED; urgency=medium
+xapp (1.4.8-1~1) UNRELEASED; urgency=medium
 
   [ Jelmer Vernooĳ ]
   * Use secure copyright file specification URI.
 
   [ Norbert Preining ]
-  * New upstream release (1.4.{2,5}).
+  * New upstream release (1.4.{2,5,8}).
 
- -- Norbert Preining <norbert@preining.info>  Sun, 17 Feb 2019 19:06:51 +0900
+ -- Norbert Preining <norbert@preining.info>  Fri, 02 Aug 2019 21:44:15 +0900
 
 xapp (1.2.2-1) unstable; urgency=medium
 
